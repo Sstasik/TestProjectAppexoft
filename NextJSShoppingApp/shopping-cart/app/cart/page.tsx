@@ -19,10 +19,10 @@ const Page = () => {
   console.log(cartItems);
   return (
     <div>
-      <div className="pl-[20px] flex flex-row justify-around">
+      <div className="pl-[20px] flex flex-row justify-around max-md:flex-col  max-md:items-center">
         <div>
           <h1 className="text-2xl font-bold pb-[20px]">Cart</h1>
-          <div className="bg-white max-w-[500px] rounded-[20px]">
+          <div className="bg-white max-w-[500px] rounded-[20px] ">
             {cartItems.length > 0 ? (
               cartItems.map((item, i) => {
                 return <CartProduct cartItem={item} key={i} />;
@@ -34,7 +34,7 @@ const Page = () => {
             )}
           </div>
         </div>
-        <div className="text-xl font-semibold bg-white max-h-[150px] rounded-[20px] flex flex-col items-center">
+        <div className="text-xl font-semibold bg-white max-h-[150px] max-w-[400px] rounded-[20px] flex flex-col items-center max-sm:mt-[15px]">
           <h2 className="m-[10px]">Total Price : {totalPrice}</h2>
           <h2 className="m-[10px]">Total Count : {totalCount}</h2>
 

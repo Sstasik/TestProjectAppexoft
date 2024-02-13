@@ -10,6 +10,7 @@ import {
 import toast from "react-hot-toast";
 
 export const CartProduct = ({ cartItem }) => {
+  console.log(cartItem);
   const dispatch = useDispatch();
   function deleteFromCart(cartID) {
     dispatch(removeFromCart(cartID));
@@ -25,7 +26,7 @@ export const CartProduct = ({ cartItem }) => {
   return (
     <div>
       <div className="flex flex-col justify-center items-center  rounded-[20px]">
-        <div className="flex flex-row items-center justify-between w-[500px] p-[20px]">
+        <div className="flex flex-row items-center justify-between w-[500px] p-[20px] max-sm:flex-col max-sm:max-w-[300px]">
           <Image
             src={cartItem.image}
             width={150}
